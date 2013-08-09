@@ -1,7 +1,7 @@
 {** block-description:myslider **}
 
 {if $items}
-	<ul class="bxslider">
+	<ul class="bxslider" id="bxslider_{$block.snapping_id}">
         {foreach from=$items item="banner" key="key"}
             <li>
             {if $banner.type == "G" && $banner.main_pair.image_id}

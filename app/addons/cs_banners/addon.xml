@@ -7,4 +7,8 @@
     <priority>2800</priority>
     <position>100</position>
     <status>active</status>
+	<language_variables>
+        <item lang="en" id="block_cs_banners">Cs Banners</item>
+        <item lang="en" id="block_cs_banners_description">Custom Visual and text banners</item>
+	</language_variables>
 </addon>

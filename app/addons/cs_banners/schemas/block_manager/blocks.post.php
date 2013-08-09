@@ -44,6 +44,41 @@ $schema['cs_banners'] = array (
         ),
     ),
     'templates' => array (
+		'addons/cs_banners/blocks/test.tpl'=>array(
+			'settings'=>array(
+				'test' => array(
+					'type' => 'selectbox',
+					'values' => array (
+						'test1' => 'test1',
+						'test2' => 'test2',
+					),
+					'default_value'=>'test2',
+					'values_settings' => array(
+						'test1' => array(
+							'settings'=>array(
+								'vas1'=>array(
+									'type'=>'checkbox',
+								),
+							)
+						),
+						'test2' => array(
+							'settings' => array(
+								'vasilis1' => array (
+									'type' => 'selectbox',
+									'values' => array (
+										'A' => 'rss_created',
+										'U' => 'rss_updated'
+									)
+								),
+								'vasilis2' => array (
+									'type' => 'checkbox',
+								),
+							)
+						),
+					)
+				),
+			)			
+		),
         'addons/cs_banners/blocks/original.tpl' => array(),
         'addons/cs_banners/blocks/carousel.tpl' => array(
             'settings' => array (
@@ -65,8 +100,8 @@ $schema['cs_banners'] = array (
         ),
 		'addons/cs_banners/blocks/myslider.tpl' => array(
             'settings' => array (
-                'mode' => array (
-                    'type' => 'selectbox',
+				'mode' => array (
+					'type' => 'selectbox',
                     'values' => array (
                         'horizontal' => 'Horizontal',
                         'vertical' => 'Vertical',
@@ -76,9 +111,83 @@ $schema['cs_banners'] = array (
                 ),
                 'speed' => array (
                     'type' => 'input',
-                    'default_value' => '500'
+                    'default_value' => 500
                 ),
-            ),
+				'slideMargin'=>array(
+					'type'=>'input',
+					'default_value'=>0
+				),
+				'startSlide'=>array(
+					'type'=>'input',
+					'default_value'=>0
+				),
+				'randomStart'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'slideSelector'=>array(
+					//TODO:NA TO FTIAXW
+				),
+				'infiniteLoop'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'true'
+				),
+				'hideControlOnEnd'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'easing'=>array(
+					//TODO:NA TO FTAXW
+				),
+				'caption'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'ticker'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'tickerHover'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'adaptiveHeight'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'adaptiveHeightSpeed'=>array(
+					'type'=>'input',
+					'default_value'=>500
+				)
+			),
         )
     ),
     'wrappers' => 'blocks/wrappers',
