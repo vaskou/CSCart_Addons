@@ -17,12 +17,18 @@
         {/foreach}
 	</ul>
 {/if}
-
+<p>{$block.properties.infiniteLoop}</p>
 <script type="text/javascript">
 $(document).ready(function(){
   $('.bxslider').bxSlider({
 		mode:'{$block.properties.mode}',
-		speed:{$block.properties.speed}
+		speed:{$block.properties.speed},
+		slideMargin:{$block.properties.slideMargin},
+		startSlide:{$block.properties.startSlide},
+		randomStart:{$block.properties.randomStart},
+		//slideSelector:{$block.properties.slideSelector},
+		infiniteLoop:{$block.properties.infiniteLoop},
+		hideControlOnEnd:{$block.properties.hideControlOnEnd},
   });
 });
 </script>

@@ -44,6 +44,9 @@ $schema['cs_banners'] = array (
         ),
     ),
     'templates' => array (
+		'addons/cs_banners/blocks/test.tpl'=>array(
+		
+		),
         'addons/cs_banners/blocks/original.tpl' => array(),
         'addons/cs_banners/blocks/carousel.tpl' => array(
             'settings' => array (
@@ -64,7 +67,7 @@ $schema['cs_banners'] = array (
             ),
         ),
 		'addons/cs_banners/blocks/myslider.tpl' => array(
-        	'settings' => array (
+            'settings' => array (
 				'mode' => array (
 					'type' => 'selectbox',
                     'values' => array (
@@ -116,14 +119,6 @@ $schema['cs_banners'] = array (
 				'easing'=>array(
 					//TODO:NA TO FTAXW
 				),
-				'useCSS'=>array(
-					'type'=>'selectbox',
-					'values'=>array(
-						'true'=>'Enabled',
-						'false'=>'Disabled'
-					),
-					'default_value'=>'true'
-				),
 				'caption'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -159,39 +154,7 @@ $schema['cs_banners'] = array (
 				'adaptiveHeightSpeed'=>array(
 					'type'=>'input',
 					'default_value'=>500
-				),
-				'video'=>array(
-					//TODO:NA TO FTIAXW
-				),
-				'responsive'=>array(
-					'type'=>'selectbox',
-					'values'=>array(
-						'true'=>'Enabled',
-						'false'=>'Disabled'
-					),
-					'default_value'=>'true'
-				),
-				'preloadImages'=>array(
-					'type'=>'selectbox',
-					'values'=>array(
-						'all'=>'All',
-						'visible'=>'Visible'
-					),
-					'default_value'=>'visible'
-				),
-				'touchEnabled'=>array(
-					'type'=>'selectbox',
-					'values'=>array(
-						'true'=>'Enabled',
-						'false'=>'Disabled'
-					),
-					'default_value'=>'true'
-				),
-				'swipeThreshold'=>array(
-					'type'=>'input',
-					'default_value'=>50
-				),
-				
+				)
 			),
         )
     ),
