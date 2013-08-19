@@ -11,13 +11,27 @@
         <item lang="en" id="block_cs_banners">Cs Banners</item>
         <item lang="en" id="block_cs_banners_description">Custom Visual and text banners</item>
 		<item lang="en" id="myslider">MySlider</item>
-		<item lang="en" id="mode">Mode</item>
+		<item lang="en" id="mode">Type of transition between slides</item>
 		<item lang="en" id="horizontal">Horizontal</item>
 		<item lang="en" id="vertical">Vertical</item>
 		<item lang="en" id="fade">Fade</item>
-		<item lang="en" id="slideMargin">Margin Between Slides</item>
+		<item lang="en" id="speed">Slide transition duration (in ms)</item>
+		<item lang="en" id="slideMargin">Margin between each slide</item>
 		<item lang="en" id="startSlide">Starting slide index</item>
 		<item lang="en" id="randomStart">Start slider on a random slide</item>
-		
+		<item lang="en" id="infiniteLoop">Clicking "Next" while on the last slide will transition to the first slide and vice-versa</item>
+		<item lang="en" id="hideControlOnEnd">"Next" control will be hidden on last slide and vice-versa</item>
+		<item lang="en" id="captions">Include image captions</item>
+		<item lang="en" id="ticker">Use slider in ticker mode</item>
+		<item lang="en" id="tickerHover">Ticker will pause when mouse hovers over slider</item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
+		<item lang="en" id=""></item>
 	</language_variables>
 </addon>
