@@ -94,9 +94,10 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
+				/*TODO:NA TO FTIAXW
 				'slideSelector'=>array(
-					//TODO:NA TO FTIAXW
-				),
+					
+				),*/
 				'infiniteLoop'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -113,9 +114,10 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
+				/*TODO:NA TO FTAXW
 				'easing'=>array(
-					//TODO:NA TO FTAXW
-				),
+					
+				),*/
 				'useCSS'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -160,9 +162,10 @@ $schema['cs_banners'] = array (
 					'type'=>'input',
 					'default_value'=>500
 				),
+				/*TODO:NA TO FTIAXW
 				'video'=>array(
-					//TODO:NA TO FTIAXW
-				),
+					
+				),*/
 				'responsive'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -191,7 +194,114 @@ $schema['cs_banners'] = array (
 					'type'=>'input',
 					'default_value'=>50
 				),
-				
+				'oneToOneTouch'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'true'
+				),
+				'preventDefaultSwipeX'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'true'
+				),
+				'preventDefaultSwipeY'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'pager'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'true'
+				),
+				'pagerType'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'full'=>'Full',
+						'short'=>'Short'
+					),
+					'default_value'=>'full'
+				),
+				'pagerShortSeparator'=>array(
+					'type'=>'input',
+					'default_value'=>'/'
+				),
+				'controls'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'true'
+				),
+				'autoControls'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'autoControlsCombine'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'auto'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'pause'=>array(
+					'type'=>'input',
+					'default_value'=>4000
+				),
+				'autoStart'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'true'
+				),
+				'autoDirection'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'next'=>'Next',
+						'prev'=>'Previous'
+					),
+					'default_value'=>'next'
+				),
+				'autoHover'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'autoDelay'=>array(
+					'type'=>'input',
+					'default_value'=>0
+				)
 			),
         )
     ),

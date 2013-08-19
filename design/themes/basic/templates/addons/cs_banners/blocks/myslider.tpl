@@ -20,7 +20,7 @@
 <p>{$block.properties.infiniteLoop}</p>
 <script type="text/javascript">
 $(document).ready(function(){
-  $('.bxslider').bxSlider({
+  $('#bxslider_{$block.snapping_id}').bxSlider({
 		mode:'{$block.properties.mode}',
 		speed:{$block.properties.speed},
 		slideMargin:{$block.properties.slideMargin},
@@ -29,6 +29,34 @@ $(document).ready(function(){
 		//slideSelector:{$block.properties.slideSelector},
 		infiniteLoop:{$block.properties.infiniteLoop},
 		hideControlOnEnd:{$block.properties.hideControlOnEnd},
+		//easing:{$block.properties.easing},
+		useCSS:{$block.properties.useCSS},
+		caption:{$block.properties.caption},
+		ticker:{$block.properties.ticker},
+		tickerHover:{$block.properties.tickerHover},
+		adaptiveHeight:{$block.properties.adaptiveHeight},
+		adaptiveHeightSpeed:{$block.properties.adaptiveHeightSpeed},
+		//video:{$block.properties.video},
+		responsive:{$block.properties.responsive},
+		preloadImages:'{$block.properties.preloadImages}',
+		touchEnabled:{$block.properties.touchEnabled},
+		swipeThreshold:{$block.properties.swipeThreshold},
+		oneToOneTouch:{$block.properties.oneToOneTouch},
+		preventDefaultSwipeX:{$block.properties.preventDefaultSwipeX},
+		preventDefaultSwipeY:{$block.properties.preventDefaultSwipeY},
+		pager:{$block.properties.pager},
+		pagerType:'{$block.properties.pagerType}',
+		pagerShortSeparator:'{$block.properties.pagerShortSeparator}',
+		controls:{$block.properties.controls},
+		autoControls:{$block.properties.autoControls},
+		autoControlsCombine:{$block.properties.autoControlsCombine},
+		auto:{$block.properties.auto},
+		pause:{$block.properties.pause},
+		autoStart:{$block.properties.autoStart},
+		autoDirection:'{$block.properties.autoDirection}',
+		autoHover:{$block.properties.autoHover},
+		autoDelay:{$block.properties.autoDelay}
+		
   });
 });
 </script>
