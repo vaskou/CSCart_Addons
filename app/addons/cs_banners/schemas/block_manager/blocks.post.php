@@ -44,28 +44,12 @@ $schema['cs_banners'] = array (
         ),
     ),
     'templates' => array (
-        'addons/cs_banners/blocks/original.tpl' => array(),
-        'addons/cs_banners/blocks/carousel.tpl' => array(
-            'settings' => array (
-                'navigation' => array (
-                    'type' => 'selectbox',
-                    'values' => array (
-                        'N' => 'none',
-                        'D' => 'dots',
-                        'P' => 'pages',
-                        'A' => 'arrows',
-                    ),
-                    'default_value' => 'D'
-                ),
-                'delay' => array (
-                    'type' => 'input',
-                    'default_value' => '3'
-                ),
-            ),
-        ),
 		'addons/cs_banners/blocks/myslider.tpl' => array(
         	'settings' => array (
-				'mode' => array (
+				'csp_delimeter'=>array(
+					
+				),
+				'csp_mode' => array (
 					'type' => 'selectbox',
                     'values' => array (
                         'horizontal' => 'Horizontal',
@@ -74,19 +58,19 @@ $schema['cs_banners'] = array (
                     ),
                     'default_value' => 'horizontal'
                 ),
-                'speed' => array (
+                'csp_speed' => array (
                     'type' => 'input',
                     'default_value' => 500
                 ),
-				'slideMargin'=>array(
+				'csp_slideMargin'=>array(
 					'type'=>'input',
 					'default_value'=>0
 				),
-				'startSlide'=>array(
+				'csp_startSlide'=>array(
 					'type'=>'input',
 					'default_value'=>0
 				),
-				'randomStart'=>array(
+				'csp_randomStart'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -94,11 +78,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				/*TODO:NA TO FTIAXW
-				'slideSelector'=>array(
-					
-				),*/
-				'infiniteLoop'=>array(
+				'csp_infiniteLoop'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -106,7 +86,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'hideControlOnEnd'=>array(
+				'csp_hideControlOnEnd'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -114,19 +94,58 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				/*TODO:NA TO FTAXW
-				'easing'=>array(
-					
-				),*/
-				'useCSS'=>array(
+				'csp_useCSS'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
-						'true'=>'Enabled',
-						'false'=>'Disabled'
+						'true'=>'CSS Transitions',
+						'false'=>'JS Transitions'
 					),
 					'default_value'=>'true'
 				),
-				'captions'=>array(
+				'csp_easing'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'linear'=>'Linear',
+						'ease'=>'Ease',
+						'ease-in'=>'Ease-In',
+						'ease-out'=>'Ease-Out',
+						'ease-in-out'=>'Ease-In-Out',
+						
+						'swing'=>'JS Swing',
+						'easeInQuad'=>'JS Ease-In Quad',
+						'easeOutQuad'=>'JS Ease-Out Quad',
+						'easeInOutQuad'=>'JS Ease-In-Out Quad',
+						'easeInCubic'=>'JS Ease-In Cubic',
+						'easeOutCubic'=>'JS Ease-Out Cubic',
+						'easeInOutCubic'=>'JS Ease-In-Out Cubic',
+						'easeInQuart'=>'JS Ease-In Quart',
+						'easeOutQuart'=>'JS Ease-Out Quart',
+						'easeInOutQuart'=>'JS Ease-In-Out Quart',
+						'easeInQuint'=>'JS Ease-In Quint',
+						'easeOutQuint'=>'JS Ease-Out Quint',
+						'easeInOutQuint'=>'JS Ease-In-Out Quint',
+						'easeInSine'=>'JS Ease-In Sine',
+						'easeOutSine'=>'JS Ease-Out Sine',
+						'easeInOutSine'=>'JS Ease-In-Out Sine',
+						'easeInExpo'=>'JS Ease-In Expo',
+						'easeOutExpo'=>'JS Ease-Out Expo',
+						'easeInOutExpo'=>'JS Ease-In-Out Expo',
+						'easeInCirc'=>'JS Ease-In Circ',
+						'easeOutCirc'=>'JS Ease-Out Circ',
+						'easeInOutCirc'=>'JS Ease-In-Out Circ',
+						'easeInElastic'=>'JS Ease-In Elastic',
+						'easeOutElastic'=>'JS Ease-Out Elastic',
+						'easeInOutElastic'=>'JS Ease-In-Out Elastic',
+						'easeInBack'=>'JS Ease-In Back',
+						'easeOutBack'=>'JS Ease-Out Back',
+						'easeInOutBack'=>'JS Ease-In-Out Back',
+						'easeInBounce'=>'JS Ease-In Bounce',
+						'easeOutBounce'=>'JS Ease-Out Bounce',
+						'easeInOutBounce'=>'JS Ease-In-Out Bounce'						
+					),
+					'default_value'=>'linear'	
+				),
+				'csp_captions'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -134,7 +153,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'ticker'=>array(
+				'csp_ticker'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -142,7 +161,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'tickerHover'=>array(
+				'csp_tickerHover'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -150,7 +169,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'adaptiveHeight'=>array(
+				'csp_adaptiveHeight'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -158,15 +177,20 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'adaptiveHeightSpeed'=>array(
+				'csp_adaptiveHeightSpeed'=>array(
 					'type'=>'input',
 					'default_value'=>500
 				),
-				/*TODO:NA TO FTIAXW
-				'video'=>array(
-					
-				),*/
-				'responsive'=>array(
+				
+				'csp_video'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'csp_responsive'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -174,7 +198,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'preloadImages'=>array(
+				'csp_preloadImages'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'all'=>'All',
@@ -182,7 +206,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'visible'
 				),
-				'touchEnabled'=>array(
+				'csp_touchEnabled'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -190,11 +214,11 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'swipeThreshold'=>array(
+				'csp_swipeThreshold'=>array(
 					'type'=>'input',
 					'default_value'=>50
 				),
-				'oneToOneTouch'=>array(
+				'csp_oneToOneTouch'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -202,7 +226,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'preventDefaultSwipeX'=>array(
+				'csp_preventDefaultSwipeX'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -210,7 +234,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'preventDefaultSwipeY'=>array(
+				'csp_preventDefaultSwipeY'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -218,7 +242,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'pager'=>array(
+				'csp_pager'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -226,7 +250,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'pagerType'=>array(
+				'csp_pagerType'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'full'=>'Full',
@@ -234,11 +258,11 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'full'
 				),
-				'pagerShortSeparator'=>array(
+				'csp_pagerShortSeparator'=>array(
 					'type'=>'input',
 					'default_value'=>'/'
 				),
-				'controls'=>array(
+				'csp_controls'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -246,7 +270,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'autoControls'=>array(
+				'csp_autoControls'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -254,7 +278,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'autoControlsCombine'=>array(
+				'csp_autoControlsCombine'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -262,7 +286,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'auto'=>array(
+				'csp_auto'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -270,11 +294,11 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'pause'=>array(
+				'csp_pause'=>array(
 					'type'=>'input',
 					'default_value'=>4000
 				),
-				'autoStart'=>array(
+				'csp_autoStart'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -282,7 +306,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'autoDirection'=>array(
+				'csp_autoDirection'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'next'=>'Next',
@@ -290,7 +314,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'next'
 				),
-				'autoHover'=>array(
+				'csp_autoHover'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -298,23 +322,23 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'autoDelay'=>array(
+				'csp_autoDelay'=>array(
 					'type'=>'input',
 					'default_value'=>0
 				),
-				'minSlides'=>array(
+				'csp_minSlides'=>array(
 					'type'=>'input',
 					'default_value'=>1
 				),
-				'maxSlides'=>array(
+				'csp_maxSlides'=>array(
 					'type'=>'input',
 					'default_value'=>1
 				),
-				'moveSlides'=>array(
+				'csp_moveSlides'=>array(
 					'type'=>'input',
 					'default_value'=>0
 				),
-				'slideWidth'=>array(
+				'csp_slideWidth'=>array(
 					'type'=>'input',
 					'default_value'=>0
 				),

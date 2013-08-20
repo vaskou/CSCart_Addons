@@ -17,49 +17,55 @@
         {/foreach}
 	</ul>
 {/if}
-{* $block.properties.infiniteLoop *}
+{*$block.properties.csp_useCSS*}
+{if $block.properties.csp_useCSS=="false"}
+	<script src="design/themes/basic/templates/addons/cs_banners/bxslider/plugins/jquery.easing.1.3.js"></script>
+{/if}
+{if $block.properties.csp_video==true}
+	<script src="design/themes/basic/templates/addons/cs_banners/bxslider/plugins/jquery.fitvids.js"></script>
+{/if}
+
 <script type="text/javascript">
 $(document).ready(function(){
-  $('#bxslider_{$block.snapping_id}').bxSlider({
-		mode:'{$block.properties.mode}',
-		speed:{$block.properties.speed},
-		slideMargin:{$block.properties.slideMargin},
-		startSlide:{$block.properties.startSlide},
-		randomStart:{$block.properties.randomStart},
-		//slideSelector:{$block.properties.slideSelector},
-		infiniteLoop:{$block.properties.infiniteLoop},
-		hideControlOnEnd:{$block.properties.hideControlOnEnd},
-		//easing:{$block.properties.easing},
-		useCSS:{$block.properties.useCSS},
-		captions:{$block.properties.captions},
-		ticker:{$block.properties.ticker},
-		tickerHover:{$block.properties.tickerHover},
-		adaptiveHeight:{$block.properties.adaptiveHeight},
-		adaptiveHeightSpeed:{$block.properties.adaptiveHeightSpeed},
-		//video:{$block.properties.video},
-		responsive:{$block.properties.responsive},
-		preloadImages:'{$block.properties.preloadImages}',
-		touchEnabled:{$block.properties.touchEnabled},
-		swipeThreshold:{$block.properties.swipeThreshold},
-		oneToOneTouch:{$block.properties.oneToOneTouch},
-		preventDefaultSwipeX:{$block.properties.preventDefaultSwipeX},
-		preventDefaultSwipeY:{$block.properties.preventDefaultSwipeY},
-		pager:{$block.properties.pager},
-		pagerType:'{$block.properties.pagerType}',
-		pagerShortSeparator:'{$block.properties.pagerShortSeparator}',
-		controls:{$block.properties.controls},
-		autoControls:{$block.properties.autoControls},
-		autoControlsCombine:{$block.properties.autoControlsCombine},
-		auto:{$block.properties.auto},
-		pause:{$block.properties.pause},
-		autoStart:{$block.properties.autoStart},
-		autoDirection:'{$block.properties.autoDirection}',
-		autoHover:{$block.properties.autoHover},
-		autoDelay:{$block.properties.autoDelay},
-		minSlides:{$block.properties.minSlides},
-		maxSlides:{$block.properties.maxSlides},
-		moveSlides:{$block.properties.moveSlides},
-		slideWidth:{$block.properties.slideWidth},		
+	$('#bxslider_{$block.snapping_id}').bxSlider({
+		mode:'{$block.properties.csp_mode}',
+		speed:{$block.properties.csp_speed},
+		slideMargin:{$block.properties.csp_slideMargin},
+		startSlide:{$block.properties.csp_startSlide},
+		randomStart:{$block.properties.csp_randomStart},
+		infiniteLoop:{$block.properties.csp_infiniteLoop},
+		hideControlOnEnd:{$block.properties.csp_hideControlOnEnd},
+		easing:'{$block.properties.csp_easing}',
+		useCSS:{$block.properties.csp_useCSS},
+		captions:{$block.properties.csp_captions},
+		ticker:{$block.properties.csp_ticker},
+		tickerHover:{$block.properties.csp_tickerHover},
+		adaptiveHeight:{$block.properties.csp_adaptiveHeight},
+		adaptiveHeightSpeed:{$block.properties.csp_adaptiveHeightSpeed},
+		video:{$block.properties.csp_video},
+		responsive:{$block.properties.csp_responsive},
+		preloadImages:'{$block.properties.csp_preloadImages}',
+		touchEnabled:{$block.properties.csp_touchEnabled},
+		swipeThreshold:{$block.properties.csp_swipeThreshold},
+		oneToOneTouch:{$block.properties.csp_oneToOneTouch},
+		preventDefaultSwipeX:{$block.properties.csp_preventDefaultSwipeX},
+		preventDefaultSwipeY:{$block.properties.csp_preventDefaultSwipeY},
+		pager:{$block.properties.csp_pager},
+		pagerType:'{$block.properties.csp_pagerType}',
+		pagerShortSeparator:'{$block.properties.csp_pagerShortSeparator}',
+		controls:{$block.properties.csp_controls},
+		autoControls:{$block.properties.csp_autoControls},
+		autoControlsCombine:{$block.properties.csp_autoControlsCombine},
+		auto:{$block.properties.csp_auto},
+		pause:{$block.properties.csp_pause},
+		autoStart:{$block.properties.csp_autoStart},
+		autoDirection:'{$block.properties.csp_autoDirection}',
+		autoHover:{$block.properties.csp_autoHover},
+		autoDelay:{$block.properties.csp_autoDelay},
+		minSlides:{$block.properties.csp_minSlides},
+		maxSlides:{$block.properties.csp_maxSlides},
+		moveSlides:{$block.properties.csp_moveSlides},
+		slideWidth:{$block.properties.csp_slideWidth},		
   });
 });
 </script>
