@@ -17,7 +17,7 @@
         {/foreach}
 	</ul>
 {/if}
-<p>{$block.properties.infiniteLoop}</p>
+{* $block.properties.infiniteLoop *}
 <script type="text/javascript">
 $(document).ready(function(){
   $('#bxslider_{$block.snapping_id}').bxSlider({
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		hideControlOnEnd:{$block.properties.hideControlOnEnd},
 		//easing:{$block.properties.easing},
 		useCSS:{$block.properties.useCSS},
-		caption:{$block.properties.caption},
+		captions:{$block.properties.captions},
 		ticker:{$block.properties.ticker},
 		tickerHover:{$block.properties.tickerHover},
 		adaptiveHeight:{$block.properties.adaptiveHeight},
@@ -55,8 +55,11 @@ $(document).ready(function(){
 		autoStart:{$block.properties.autoStart},
 		autoDirection:'{$block.properties.autoDirection}',
 		autoHover:{$block.properties.autoHover},
-		autoDelay:{$block.properties.autoDelay}
-		
+		autoDelay:{$block.properties.autoDelay},
+		minSlides:{$block.properties.minSlides},
+		maxSlides:{$block.properties.maxSlides},
+		moveSlides:{$block.properties.moveSlides},
+		slideWidth:{$block.properties.slideWidth},		
   });
 });
 </script>

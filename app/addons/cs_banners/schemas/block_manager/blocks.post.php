@@ -126,7 +126,7 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'true'
 				),
-				'caption'=>array(
+				'captions'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'Enabled',
@@ -301,7 +301,23 @@ $schema['cs_banners'] = array (
 				'autoDelay'=>array(
 					'type'=>'input',
 					'default_value'=>0
-				)
+				),
+				'minSlides'=>array(
+					'type'=>'input',
+					'default_value'=>1
+				),
+				'maxSlides'=>array(
+					'type'=>'input',
+					'default_value'=>1
+				),
+				'moveSlides'=>array(
+					'type'=>'input',
+					'default_value'=>0
+				),
+				'slideWidth'=>array(
+					'type'=>'input',
+					'default_value'=>0
+				),
 			),
         )
     ),
