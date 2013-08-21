@@ -46,7 +46,8 @@ $schema['cs_banners'] = array (
     'templates' => array (
 		'addons/cs_banners/blocks/myslider.tpl' => array(
         	'settings' => array (
-				'csp_delimeter'=>array(
+/*********************GENERAL*******************************/
+				'csp_generalSeperator'=>array(
 					
 				),
 				'csp_mode' => array (
@@ -94,14 +95,14 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
-				'csp_useCSS'=>array(
+				/*'csp_useCSS'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
 						'true'=>'CSS Transitions',
 						'false'=>'JS Transitions'
 					),
 					'default_value'=>'true'
-				),
+				),*/
 				'csp_easing'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -181,7 +182,6 @@ $schema['cs_banners'] = array (
 					'type'=>'input',
 					'default_value'=>500
 				),
-				
 				'csp_video'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -242,6 +242,11 @@ $schema['cs_banners'] = array (
 					),
 					'default_value'=>'false'
 				),
+				
+/***********************PAGER*************************************/				
+
+				'csp_pagerSeperator'=>array(
+				),				
 				'csp_pager'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -262,6 +267,18 @@ $schema['cs_banners'] = array (
 					'type'=>'input',
 					'default_value'=>'/'
 				),
+				'csp_pagerThumbs'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				
+/**********************CONTROLS********************************/
+				'csp_controlsSeparator'=>array(
+				),				
 				'csp_controls'=>array(
 					'type'=>'selectbox',
 					'values'=>array(
@@ -269,6 +286,22 @@ $schema['cs_banners'] = array (
 						'false'=>'Disabled'
 					),
 					'default_value'=>'true'
+				),
+				'csp_customControls'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'csp_nextText'=>array(
+					'type'=>'input',
+					'default_value'=>'Next'
+				),
+				'csp_prevText'=>array(
+					'type'=>'input',
+					'default_value'=>'Previous'
 				),
 				'csp_autoControls'=>array(
 					'type'=>'selectbox',
@@ -285,6 +318,26 @@ $schema['cs_banners'] = array (
 						'false'=>'Disabled'
 					),
 					'default_value'=>'false'
+				),
+				'csp_customAutoControls'=>array(
+					'type'=>'selectbox',
+					'values'=>array(
+						'true'=>'Enabled',
+						'false'=>'Disabled'
+					),
+					'default_value'=>'false'
+				),
+				'csp_startText'=>array(
+					'type'=>'input',
+					'default_value'=>'Start'
+				),
+				'csp_stopText'=>array(
+					'type'=>'input',
+					'default_value'=>'Stop'
+				),
+				
+/***********************AUTO********************************/
+				'csp_autoSeperator'=>array(
 				),
 				'csp_auto'=>array(
 					'type'=>'selectbox',
@@ -325,6 +378,10 @@ $schema['cs_banners'] = array (
 				'csp_autoDelay'=>array(
 					'type'=>'input',
 					'default_value'=>0
+				),
+
+/**********************CAROUSEL***************************************/
+				'csp_carouselSeperator'=>array(
 				),
 				'csp_minSlides'=>array(
 					'type'=>'input',
