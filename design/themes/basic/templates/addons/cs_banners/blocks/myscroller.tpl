@@ -33,19 +33,24 @@
 		height:100%;
 	}
 	
+	.bximg img 
+	{
+		height:auto;
+	}
+	
 </style>
 
 <ul id="bxslider_{$block.snapping_id}">
 	{foreach from=$items item="product" name="for_products"}
             <li>
             {assign var="obj_id" value="scr_`$block.block_id`000`$product.product_id`"}
-            {if $block.properties.csp_slideWidth>='0'}
-            	{include file="common/image.tpl" assign="object_img" image_width=$block.properties.csp_slideWidth images=$product.main_pair no_ids=true}
+            {if $block.properties.csp_slideWidth>'0'}
+            	{include file="common/image.tpl" assign="object_img" image_width=$block.properties.csp_slideWidth image_height=$block.properties.csp_slideWidth images=$product.main_pair no_ids=true}
             {else}
             	{include file="common/image.tpl" assign="object_img" images=$product.main_pair no_ids=true}
             {/if}
             <div class="slide">
-                <div>
+                <div class="bximg">
                     <a href="{"products.view?product_id=`$product.product_id`"|fn_url}">{$object_img nofilter}</a>
                     {if $block.properties.enable_quick_view == "Y"}
                         {include file="views/products/components/quick_view_link.tpl" quick_nav_ids=$quick_nav_ids}
