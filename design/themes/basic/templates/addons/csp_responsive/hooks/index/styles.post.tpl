@@ -108,7 +108,7 @@
 .container:after{clear:both;}
 .container-fluid{padding-right:15px;padding-left:15px;*zoom:1;max-width:{/literal}{$addons.csp_responsive.csp_max_width}{literal}px;margin:0 auto;}.container-fluid:before,.container-fluid:after{display:table;content:"";line-height:0;}
 .container-fluid:after{clear:both;}
-@-ms-viewport{width:device-width;}.hidden{display:none;visibility:hidden;}
+@-ms-viewport{width:device-width;}.hidden{display:none;}
 .visible-phone{display:none !important;}
 .visible-tablet{display:none !important;}
 .hidden-desktop{display:none !important;}
