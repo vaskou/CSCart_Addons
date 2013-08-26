@@ -124,4 +124,14 @@
 {/literal}
 
 {/if}
+{literal}
+
+.span_img img{
+	max-width:100%;
+	max-height:150px;
+	width:auto;
+	height:auto;
+}
+
+{/literal}
 </style>
