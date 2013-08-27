@@ -25,7 +25,7 @@
     {/if}
     
     <div class="span5">
-        <span class="cm-reload-{$obj_prefix}{$obj_id} image-reload" id="list_image_update_{$obj_prefix}{$obj_id} image-wrapper">
+        <span class="cm-reload-{$obj_prefix}{$obj_id} image-reload csp_span_img" id="list_image_update_{$obj_prefix}{$obj_id} image-wrapper">
 
             
 

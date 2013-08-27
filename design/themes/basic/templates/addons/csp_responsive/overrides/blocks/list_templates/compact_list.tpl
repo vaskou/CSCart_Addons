@@ -22,10 +22,10 @@
     {include file="common/product_data.tpl" product=$product}
     {hook name="products:product_compact_list"}
     <tr class="valign {cycle values=',table-row'}{if $smarty.foreach.products.last} last{/if} row-fluid" style="border-bottom:1px solid #e3e3e3;">
-        <td class="span2 span_img" style="border:none;">
-            <a href="{"products.view?product_id=`$product.product_id`"|fn_url}">{include file="common/image.tpl"  images=$product.main_pair obj_id=$obj_id_prefix}</a>
+        <td class=" span2 csp_span_img" style="border:none;">
+            <a href="{"products.view?product_id=`$product.product_id`"|fn_url}">{include file="common/image.tpl" image_width="150" image_height="150" images=$product.main_pair obj_id=$obj_id_prefix}</a>
         </td>
-        <td class="span11" style="border:none;">
+        <td class="span8" style="border:none;">
             {assign var="name" value="name_$obj_id"}{$smarty.capture.$name nofilter}
 
             <br/>
@@ -38,7 +38,7 @@
         </td>
 
         {if $show_add_to_cart}
-        <td class=" span3" style="border:none;">
+        <td class="nowrap right span6" style="border:none;">
 
             {if !$smarty.capture.capt_options_vs_qty}
             {assign var="product_options" value="product_options_`$obj_id`"}

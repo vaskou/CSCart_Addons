@@ -126,11 +126,19 @@
 {/if}
 {literal}
 
-.span_img img{
-	max-width:100%;
-	max-height:150px;
+.csp_span_img img{
+	max-width:90%;
 	width:auto;
 	height:auto;
+	display:block;
+	margin:0 auto;
+}
+@media (min-width:120px){
+.csp_span_img_no_border img{
+	max-width:90%;
+	width:auto;
+	height:auto;
+}
 }
 
 {/literal}
