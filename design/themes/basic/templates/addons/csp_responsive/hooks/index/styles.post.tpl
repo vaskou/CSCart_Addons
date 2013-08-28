@@ -134,12 +134,18 @@
 	margin:0 auto;
 }
 @media (min-width:120px){
-.csp_span_img_no_border img{
-	max-width:90%;
-	width:auto;
-	height:auto;
-}
+	.csp_span_img_no_border img{
+		max-width:90%;
+		width:auto;
+		height:auto;
+	}
+	
+	.tygh-top-panel > div{
+		height:auto;
+	}
 }
 
 {/literal}
 </style>
+
+<link rel="stylesheet" href="design/themes/basic/templates/addons/csp_responsive/meanmenu.css">
