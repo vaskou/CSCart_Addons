@@ -95,3 +95,6 @@
 {script src="js/tygh/product_image_gallery.js"}
 
 {hook name="products:product_images"}{/hook}
+
+{*********************************************CSP changes************************************************}
+{*Line  66: changed style width from {$image_width}px to 100%											*}

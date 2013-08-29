@@ -145,6 +145,39 @@
 	}
 }
 
+/******************CSP Top Menu Style*****************************************/
+ul.dropdown-multicolumns li:hover .col-1 a{
+	padding:0;
+	border:none;
+	text-shadow:none;
+	display:inline;
+}
+
+ul.dropdown-multicolumns li ul.dropdown-fullwidth{
+	margin:4px auto;
+	padding:20px 0 0;
+}
+
+ul.dropdown-multicolumns li ul.dropdown-fullwidth li.firstcolumn:hover{
+	margin-left:9px;
+}
+
+ul.dropdown-multicolumns li ul.dropdown-fullwidth li.lastcolumn:hover{
+	margin-right:9px;
+}
+
+.dropdown-multicolumns .col-1:hover{
+	margin-right:10px;
+	padding-bottom:10px;
+}
+
+ul.dropdown-multicolumns li:hover ul .alt-link a{
+	color:#0088cc;
+}
+
+/******************END CSP Top Menu Style************************************/
+
+
 {/literal}
 </style>
 

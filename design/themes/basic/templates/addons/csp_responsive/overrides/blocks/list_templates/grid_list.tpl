@@ -24,7 +24,6 @@
     {assign var="cur_number" value=1}
 {/if}
 
-{*********************    CSP calculate span         ************************}
 {math equation="16 / x" x=$columns|default:"2" format="%.0f" assign="span_no"}
 
 {script src="js/tygh/product_image_gallery.js"}
@@ -131,3 +130,11 @@
 {/if}
 
 {capture name="mainbox_title"}{$title}{/capture}
+
+{*********************************************CSP changes************************************************}
+{*Line  27: added math equation																			*}
+{*Line  34: added class row-fluid																		*}
+{*Line  36: added class row-fluid 																		*}
+{*Line  38: commented the line 																			*}
+{*Line  39: removed style="width: {$cell_width}%" and added class span{$span_no} 						*}
+{*Line  101: commented the line 																		*}

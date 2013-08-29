@@ -163,3 +163,9 @@
 </div>
 
 {capture name="mainbox_title"}{assign var="details_page" value=true}{/capture}
+
+{*********************************************CSP changes************************************************}
+{*Line   5: added class row-fluid																		*}
+{*Line  11: removed class float-left and added span6													*}
+{*Line  14: added class csp_span_img_no_border															*}
+{*Line  29: added class span10																			*}

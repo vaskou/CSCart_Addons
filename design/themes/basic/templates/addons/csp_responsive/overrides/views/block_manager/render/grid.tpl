@@ -5,3 +5,6 @@
         {/if}
     </div>
 {if $grid.omega}</div>{/if}
+
+{*********************************************CSP changes************************************************}
+{*Line   1: added {if $addons.csp_responsive.csp_fluid_enabled=='true'}-fluid{/if}						*}

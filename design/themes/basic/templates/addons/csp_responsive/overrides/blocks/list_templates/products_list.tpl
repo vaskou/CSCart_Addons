@@ -159,3 +159,11 @@
 {/if}
 
 {capture name="mainbox_title"}{$title}{/capture}
+
+{*********************************************CSP changes************************************************}
+{*Line  20: added class row-fluid																		*}
+{*Line  27: removed class float-left product-item-image center and added span5							*}
+{*Line  28: added class csp_span_img																	*}
+{*Line  63: moved the div from line 63 to line 116, 													*}
+{*			and removed class float-right right add-product and added span4								*}
+{*Line  63: removed class prod-info and added span10 													*}

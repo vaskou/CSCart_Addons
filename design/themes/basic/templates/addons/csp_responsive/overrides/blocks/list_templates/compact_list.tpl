@@ -64,3 +64,11 @@
 {/if}
 
 {/if}
+
+{*********************************************CSP changes************************************************}
+{*Line  17: added class row-fluid																		*}
+{*Line  24: added class row-fluid and style border-bottom:1px solid #e3e3e3;							*}
+{*Line  25: removed class product-image and added class span2, csp_span_img and style border:none;		*}
+{*Line  26: changed variables image-width and image height from 40 to 150								*}
+{*Line  28: removed class compact and added span8 and style border:none 								*}
+{*Line  41: added class span6 and style border:none 													*}

@@ -1,7 +1,7 @@
 {hook name="blocks:topmenu_dropdown"}
 {if $items}
-    <div class="wrap-dropdown-multicolumns"><header><nav>
-
+    <div class="wrap-dropdown-multicolumns">
+<header><nav>
         <ul class="dropdown-multicolumns clearfix">
         
         {hook name="blocks:topmenu_dropdown_top_menu"}
@@ -57,11 +57,11 @@
                         {assign var="dropdown_class" value="dropdown-`$cols`columns"}
                     {/if}
 
-                    <div class="{$dropdown_class}{if $smarty.foreach.item1.index > 4 && $smarty.foreach.item1.last} drop-left{/if}" id="{$unique_elm_id}">
+                    <ul class="{$dropdown_class}{if $smarty.foreach.item1.index > 4 && $smarty.foreach.item1.last} drop-left{/if}" id="{$unique_elm_id}">
                         {hook name="blocks:topmenu_dropdown_3levels_cols"}
                         
                         {foreach from=$item1.$childs item="item2" name="item2"}
-                            <div class="col-1{if $smarty.foreach.item2.index % $cols == 0 || $smarty.foreach.item2.first} firstcolumn{elseif $smarty.foreach.item2.index % $cols == ($cols - 1) || $smarty.foreach.item2.last} lastcolumn{/if}">
+                            <li class="col-1{if $smarty.foreach.item2.index % $cols == 0 || $smarty.foreach.item2.first} firstcolumn{elseif $smarty.foreach.item2.index % $cols == ($cols - 1) || $smarty.foreach.item2.last} lastcolumn{/if}">
                                 {assign var="item2_url" value=$item2|fn_form_dropdown_object_link:$block.type}
                                 <h3{if $item2.active || $item2|fn_check_is_active_menu_item:$block.type} class="cm-active"{/if}><a{if $item2_url} href="{$item2_url}"{/if}>{$item2.$name}</a></h3>
 
@@ -78,7 +78,7 @@
                                 {/hook}
                                 </ul> 
                                 {/if}
-                            </div>
+                            </li>
 
                         {/foreach}
 
@@ -90,7 +90,7 @@
                         
                         {/hook}
 
-                    </div>
+                    </ul>
 
                 {/if}
 
@@ -99,8 +99,8 @@
         {/foreach}
         
         {/hook}
-        </ul>
-        <div class="clear"></div></nav></header>
+        </ul></nav></header>
+        <div class="clear"></div>
     </div>
 {/if}
 
@@ -126,9 +126,21 @@ Tygh.$(document).ready(function(){
 });
 //]]>
 </script>
+
 <script>
 jQuery(document).ready(function () {
-    jQuery('header nav').meanmenu();
+    jQuery('header nav').meanmenu({
+		meanScreenWidth: "768",
+		meanRemoveAttrs: true
+	});
 });
 </script>
+
 {/literal}
+
+
+{*********************************************CSP changes************************************************}
+{*Line   4: added header nav, closed in line 102														*}
+{*Line  60: changed div to ul, closed in line 93														*}
+{*Line  64: changed div to li, closed in line 81														*}
+{*Line 130: added script 																				*}

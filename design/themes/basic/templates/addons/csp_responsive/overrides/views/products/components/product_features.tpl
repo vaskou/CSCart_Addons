@@ -46,3 +46,8 @@
         {include file="views/products/components/product_features.tpl" product_features=$feature.subfeatures}
     {/if}
 {/foreach}
+
+{*********************************************CSP changes************************************************}
+{*Line   3: changed class control-group to control-group1 and added class row-fluid						*}
+{*Line   5: added class span5 and tag b																	*}
+{*Line  14: added class span10 and style="padding:0;margin:0;"											*}
