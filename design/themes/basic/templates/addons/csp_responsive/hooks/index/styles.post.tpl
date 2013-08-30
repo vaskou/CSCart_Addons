@@ -175,10 +175,18 @@ ul.dropdown-multicolumns li:hover ul .alt-link a{
 	color:#0088cc;
 }
 
-/******************END CSP Top Menu Style************************************/
+/******************END CSP Top Menu Style*************************************/
 
+
+/******************CSP Sidebox Style******************************************/
+@media (max-width:767px){
+	.sidebox-body{
+		
+	}
+}
+/******************END CSP Sidebox Style**************************************/
 
 {/literal}
 </style>
 
-<link rel="stylesheet" href="design/themes/basic/templates/addons/csp_responsive/meanmenu.css">
+{style src="addons/csp_responsive/meanmenu.css"}
