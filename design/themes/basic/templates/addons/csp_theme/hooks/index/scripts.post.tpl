@@ -1,0 +1,1 @@
+{script src="js/addons/csp_theme/csp_theme.js"}
