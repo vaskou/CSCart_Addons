@@ -1,1 +1,1 @@
-{fn_get_current_preset()}
+{*fn_get_current_preset()*}

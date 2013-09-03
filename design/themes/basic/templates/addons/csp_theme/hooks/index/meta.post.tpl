@@ -1,10 +1,18 @@
-<link href="http://fonts.googleapis.com/css?family={$current_preset.data.fonts.body_font.family|escape:'url'}" rel='stylesheet' type='text/css'>
-
-{if $current_preset.data.fonts.body_font.family=='GFont'}
-	{$current_preset.data.fonts.body_font.family=$current_preset.data.fonts.gfont}
-	<link href="http://fonts.googleapis.com/css?family={$current_preset.data.fonts.gfont|escape:'url'}" rel='stylesheet' type='text/css'>
+{if $addons.csp_theme.csp_body_gfont}
+	{append var=fonts value=$addons.csp_theme.csp_body_gfont index=1}
 {/if}
 
-{if $runtime.customization_mode.theme_editor=='true'}
-	<link href='http://fonts.googleapis.com/css?family=Hanalei+Fill' rel='stylesheet' type='text/css'>
+{if $addons.csp_theme.csp_headings_gfont}
+	{append var=fonts value=$addons.csp_theme.csp_headings_gfont index=2}
 {/if}
+{if $addons.csp_theme.csp_links_gfont}
+	{append var=fonts value=$addons.csp_theme.csp_links_gfont index=3}
+{/if}
+{if $addons.csp_theme.csp_price_tag_gfont}
+	{append var=fonts value=$addons.csp_theme.csp_price_tag_gfont index=4}
+{/if}
+{if $addons.csp_theme.csp_buttons_gfont}
+	{append var=fonts value=$addons.csp_theme.csp_buttons_gfont index=5}
+{/if}
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family={$fonts.1}|{$fonts.2}|{$fonts.3}|{$fonts.4}|{$fonts.5}">
