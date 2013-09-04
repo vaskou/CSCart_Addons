@@ -1,20 +1,21 @@
 <?xml version="1.0"?>
 <addon scheme="2.0">
-	<id>csp_theme</id>
-    <name>CS Plus Theme</name>
-    <description>CS Plus Theme</description>
+	<id>csp_social</id>
+    <name>CS Plus Social</name>
+    <description>CS Plus Social</description>
     <version>1.0</version>
     <priority>3000000000</priority>
     <position>0</position>
+	<status>active</status>
     <dependencies/>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
     <translations>
-        <item for="name" lang="en">CS Plus Theme</item>
-        <item for="name" lang="el">Δοκιμαστικό CS Plus Theme</item>
-        <item for="description" lang="en">CS Plus Theme description</item>
-        <item for="description" lang="el">CS Plus Theme Περιγραφή</item>
+        <item for="name" lang="en">CS Plus Social</item>
+        <item for="name" lang="el">Δοκιμαστικό CS Plus Social</item>
+        <item for="description" lang="en">CS Plus Social description</item>
+        <item for="description" lang="el">CS Plus Social Περιγραφή</item>
     </translations>
-    <settings layout="separate" edition_type="ULT:ROOT,ULT:VENDOR">
+    <settings edition_type="ULT:ROOT,ULT:VENDOR">
         <sections>
             <section id="csp_social_links">
                 <!-- Tab name in the default language -->
