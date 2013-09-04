@@ -1,43 +1,206 @@
 <?xml version="1.0"?>
 <addon scheme="2.0">
-    <id>csp_theme</id>
-    <name>Theme Addons</name>
-    <description>Adds theme options</description>
+	<id>csp_theme</id>
+    <name>CS Plus Theme</name>
+    <description>CS Plus Theme</description>
     <version>1.0</version>
-    <priority>2800</priority>
-    <position>100</position>
-    <status>active</status>
-	<settings edition_type="ROOT,ULT:VENDOR">
-		<sections>
-			<section id="general">
-				<items>
-					<item id="csp_body_gfont">
-						<name>Enter the Google Font for the Body</name>
-						<type>input</type>
-						<default_value></default_value>
-					</item>
-					<item id="csp_headings_gfont">
-						<name>Enter the Google Font for the Headings</name>
-						<type>input</type>
-						<default_value></default_value>
-					</item>
-					<item id="csp_links_gfont">
-						<name>Enter the Google Font for the Links</name>
-						<type>input</type>
-						<default_value></default_value>
-					</item>
-					<item id="csp_price_tag_gfont">
-						<name>Enter the Google Font for the Price Tag</name>
-						<type>input</type>
-						<default_value></default_value>
-					</item>
-					<item id="csp_buttons_gfont">
-						<name>Enter the Google Font for the Buttons</name>
-						<type>input</type>
-						<default_value></default_value>
-					</item>
-				</items>
-			</section>
-		</sections>
-	</settings>
+    <priority>3000000000</priority>
+    <position>0</position>
+    <dependencies/>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <translations>
+        <item for="name" lang="en">CS Plus Theme</item>
+        <item for="name" lang="el">Δοκιμαστικό CS Plus Theme</item>
+        <item for="description" lang="en">CS Plus Theme description</item>
+        <item for="description" lang="el">CS Plus Theme Περιγραφή</item>
+    </translations>
+    <settings layout="separate" edition_type="ULT:ROOT,ULT:VENDOR">
+        <sections>
+            <section id="csp_social_links">
+                <!-- Tab name in the default language -->
+                <name>Social links</name>
+                <translations>
+                    <item lang="EN" for="name">Social links</item>
+                </translations>
+                <items>
+                    <item id="csp_social_icons_alignment">
+                        <type>selectbox</type>
+                        <name>Social Icons Alignment</name>
+                        <tooltip>Select the preferred alignment of the icons</tooltip>
+                        <variants>
+                            <item id="center">
+                                <name>Center</name>
+                            </item>
+                            <item id="left">
+                                <name>Left</name>
+                            </item>
+                            <item id="right">
+                                <name>Right</name>
+                            </item>
+                            <item id="vertical">
+                                <name>Vertical</name>
+                            </item>
+                        </variants>
+                    </item>
+                    <item id="csp_social_icons_size">
+                        <type>selectbox</type>
+                        <name>Social Icons Size</name>
+                        <tooltip>Select the preferred size of the icons</tooltip>
+                        <variants>
+                            <item id="icon-default">
+                                <name>Default size</name>
+                            </item>
+                            <item id="icon-large">
+                                <name>Large size</name>
+                            </item>
+                            <item id="icon-2x">
+                                <name>2x size</name>
+                            </item>
+                            <item id="icon-3x">
+                                <name>3x size</name>
+                            </item>
+                            <item id="icon-4x">
+                                <name>4x size</name>
+                            </item>
+                        </variants>
+                    </item>
+                    <item id="csp_social_icons_border">
+                        <type>checkbox</type>
+                        <name>Enable border</name>
+                        <tooltip>Check this option to enable a discrete border around the icons</tooltip>
+                    </item>
+                    <item id="csp_social_icons_shadow">
+                        <type>checkbox</type>
+                        <name>Enable shadow</name>
+                        <tooltip>Check this option to enable a discrete shadow around the icons</tooltip>
+                    </item>
+                    <item id="csp_social_icons_circle">
+                        <type>checkbox</type>
+                        <name>Enable circle</name>
+                        <tooltip>Check this option for rounded icons</tooltip>
+                    </item>
+                    <item id="csp_social_icons_color">
+                        <type>checkbox</type>
+                        <name>Enable color</name>
+                        <tooltip>Check this option for colored icons</tooltip>
+                    </item>
+                    <item id="csp_social_icons_white">
+                        <type>checkbox</type>
+                        <name>Enable white</name>
+                        <tooltip>Check this option for dark background. Will be ignored if Enable color has been checked</tooltip>
+                    </item>
+                    <item id="csp_rss">
+                        <type>input</type>
+                        <name>RSS Feed</name>
+                        <default_value>http://news.google.com/?output=rss</default_value>
+                        <tooltip>Enter your rss feed url here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">RSS Feed</item>
+                            <item lang="EN" for="tooltip">Enter your rss feed url here.</item>
+                        </translations>
+                    </item>
+                    <item id="csp_twitter">
+                        <type>input</type>
+                        <name>Twitter URL</name>
+                        <default_value>http://www.twitter.com</default_value>
+                        <tooltip>Enter your Twitter URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Twitter URL</item>
+                            <item lang="EN" for="tooltip">Enter your Twitter URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_facebook">
+                        <type>input</type>
+                        <name>Facebook Profile</name>
+                        <default_value>http://www.facebook.com</default_value>
+                        <tooltip>Enter your Facebook Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Facebook Profile</item>
+                            <item lang="EN" for="tooltip">Enter your Facebook Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_googleplus">
+                        <type>input</type>
+                        <name>Google + Profile</name>
+                        <default_value>https://plus.google.com</default_value>
+                        <tooltip>Enter your Google + Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Google + Profile</item>
+                            <item lang="EN" for="tooltip">Enter your Google + Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_linkedin">
+                        <type>input</type>
+                        <name>LinkedIn Profile</name>
+                        <default_value>http://www.linkedin.com/</default_value>
+                        <tooltip>Enter your LinkedIn Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">LinkedIn Profile</item>
+                            <item lang="EN" for="tooltip">Enter your LinkedIn Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_dribbble">
+                        <type>input</type>
+                        <name>Dribbble Profile URL</name>
+                        <default_value>http://dribbble.com/</default_value>
+                        <tooltip>Enter your Dribbble Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Dribbble Profile</item>
+                            <item lang="EN" for="tooltip">Enter your Dribbble Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_tumblr">
+                        <type>input</type>
+                        <name>Tumblr Profile URL</name>
+                        <default_value>https://www.tumblr.com/</default_value>
+                        <tooltip>Enter your Tumblr Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Tumblr Profile</item>
+                            <item lang="EN" for="tooltip">Enter your Tumblr Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_instagram">
+                        <type>input</type>
+                        <name>Instagram Profile URL</name>
+                        <default_value>http://instagram.com/</default_value>
+                        <tooltip>Enter your Instagram Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Instagram Profile</item>
+                            <item lang="EN" for="tooltip">Enter your Instagram Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_youtube">
+                        <type>input</type>
+                        <name>YouTube Profile URL</name>
+                        <default_value>http://www.youtube.com/</default_value>
+                        <tooltip>Enter your YouTube Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">YouTube Profile</item>
+                            <item lang="EN" for="tooltip">Enter your YouTube Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_pinterest">
+                        <type>input</type>
+                        <name>Pinterest Profile URL</name>
+                        <default_value>https://pinterest.com/</default_value>
+                        <tooltip>Enter your Pinterest Profile URL here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Pinterest Profile</item>
+                            <item lang="EN" for="tooltip">Enter your Pinterest Profile URL here</item>
+                        </translations>
+                    </item>
+                    <item id="csp_email">
+                        <type>input</type>
+                        <name>Email</name>
+                        <default_value>info@example.com</default_value>
+                        <tooltip>Enter your email address here. Leave blank to disable.</tooltip>
+                        <translations>
+                            <item lang="EN" for="name">Email Address</item>
+                            <item lang="EN" for="tooltip">Enter your email address here</item>
+                        </translations>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
 </addon>
