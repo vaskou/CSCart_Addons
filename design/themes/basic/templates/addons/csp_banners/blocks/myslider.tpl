@@ -1,52 +1,21 @@
 {** block-description:myslider **}
-<style type="text/css">
-	
-	#bx-pager_{$block.snapping_id}
-	{
-		text-align:center;
-	}
-	
-	#bx-pager_{$block.snapping_id} a
-	{
-		margin:0 3px;
-	}
-	
-	#bx-pager_{$block.snapping_id} a > div
-	{
-		padding:3px;
-		border:solid #ccc 1px;
-		width:80px;
-		height:80px;
-		overflow:hidden;
-		display:inline-block;
-	}
-	
-	#bx-pager_{$block.snapping_id} a.active > div
-	{
-		border:solid #5280DD 1px;
-	}
-	
-	#bx-pager_{$block.snapping_id} a > div img
-	{
-		width:auto;
-		height:100%;
-	}
-	
-</style>
+{style src='addons/csp_banners/bxslider.pager.css'}
 
 {if $items}
 	<ul class="bxslider" id="bxslider_{$block.snapping_id}">
         {foreach from=$items item="banner" key="key"}
             <li>
-            {if $banner.type == "G" && $banner.main_pair.image_id}
-                {if $banner.url != ""}<a href="{$banner.url|fn_url}" {if $banner.target == "B"}target="_blank"{/if}>{/if}
-                {include file="common/image.tpl" images=$banner.main_pair}
-                {if $banner.url != ""}</a>{/if}
-            {else}
-                <div class="wysiwyg-content">
-                    {$banner.description nofilter}
-                </div>
-            {/if}
+            	<div class="bximg">
+		            {if $banner.type == "G" && $banner.main_pair.image_id}
+        		        {if $banner.url != ""}<a href="{$banner.url|fn_url}" {if $banner.target == "B"}target="_blank"{/if}>{/if}
+                		{include file="common/image.tpl" images=$banner.main_pair}
+		                {if $banner.url != ""}</a>{/if}
+        		    {else}
+                		<div class="wysiwyg-content">
+		                    {$banner.description nofilter}
+        		        </div>
+		            {/if}
+      			</div>
             </li>
         {/foreach}
 	</ul>
@@ -98,10 +67,10 @@
 
 {*$block.properties.csp_useCSS*}
 {if $csp_useCSS=="false"}
-	<script src="design/themes/basic/templates/addons/cs_banners/bxslider/plugins/jquery.easing.1.3.js"></script>
+	{script src="js/addons/csp_banners/bxslider/plugins/jquery.easing.1.3.js"}
 {/if}
 {if $block.properties.csp_video=='true'}
-	<script src="design/themes/basic/templates/addons/cs_banners/bxslider/plugins/jquery.fitvids.js"></script>
+	{script src="js/addons/csp_banners/bxslider/plugins/jquery.fitvids.js"}
 {/if}
 
 <script type="text/javascript">

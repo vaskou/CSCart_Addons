@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
 <addon scheme="2.0">
-    <id>cs_banners</id>
-    <name>Custom Banners management</name>
+    <id>csp_banners</id>
+    <name>CS Plus Banners</name>
     <description>Allows you to create text and visual banners</description>
     <version>1.0</version>
     <priority>2800</priority>
     <position>100</position>
     <status>active</status>
 	<language_variables>
-        <item lang="en" id="block_cs_banners">Cs Banners</item>
-        <item lang="en" id="block_cs_banners_description">Custom Visual and text banners</item>
+        <item lang="en" id="block_csp_banners">CS Plus Banners</item>
+        <item lang="en" id="block_csp_banners_description">Custom Visual and text banners</item>
+		<item lang="en" id="block_csp_banners_products">CS Plus Banners Products</item>
+        <item lang="en" id="block_csp_banners_products_description">Custom Visual and text banners</item>
 		<item lang="en" id="myslider">MySlider</item>
-		<item lang="en" id="csp_mode">Mode
-		Type of transition between slides</item>
-		<item lang="en" id="horizontal">Horizontal</item>
-		<item lang="en" id="vertical">Vertical</item>
-		<item lang="en" id="fade">Fade</item>
+		<item lang="en" id="csp_mode">Type of transition between slides</item>
+		
 		<item lang="en" id="csp_speed">Slide transition duration (in ms)</item>
 		<item lang="en" id="csp_slideMargin">Margin between each slide</item>
 		<item lang="en" id="csp_startSlide">Starting slide index</item>
@@ -29,8 +28,6 @@
 		<item lang="en" id="csp_adaptiveHeightSpeed">Slide height transition duration (in ms)</item>
 		<item lang="en" id="csp_responsive">Enable or disable auto resize of the slider</item>
 		<item lang="en" id="csp_preloadImages">If 'All', preloads all images before starting the slider. If 'Visible', preloads only images in the initially visible slides before starting the slider</item>
-		<item lang="en" id="all">All</item>
-		<item lang="en" id="visible">Visible</item>
 		<item lang="en" id="csp_touchEnabled">Slider will allow touch swipe transitions</item>
 		<item lang="en" id="csp_swipeThreshold">Amount of pixels a touch swipe needs to exceed in order to execute a slide transition</item>
 		<item lang="en" id="csp_oneToOneTouch">Non-fade slides follow the finger as it swipes</item>
@@ -38,8 +35,6 @@
 		<item lang="en" id="csp_preventDefaultSwipeY">Touch screen will not move along the y-axis as the finger swipes</item>
 		<item lang="en" id="csp_pager">A pager will be added</item>
 		<item lang="en" id="csp_pagerType">If 'Full', a pager link will be generated for each slide. If 'Short', a x/y pager will be used</item>
-		<item lang="en" id="full">Full</item>
-		<item lang="en" id="short">Short</item>
 		<item lang="en" id="csp_pagerShortSeparator">If pager type is 'Short', pager will use this value as the separating character</item>
 		<item lang="en" id="csp_controls">"Next" / "Prev" controls will be added</item>
 		<item lang="en" id="csp_autoControls">"Start" / "Stop" controls will be added</item>
@@ -48,8 +43,6 @@
 		<item lang="en" id="csp_pause">The amount of time (in ms) between each auto transition</item>
 		<item lang="en" id="csp_autoStart">Auto show starts playing on load. If disabled, slideshow will start when the "Start" control is clicked</item>
 		<item lang="en" id="csp_autoDirection">The direction of auto show slide transitions</item>
-		<item lang="en" id="next">Next</item>
-		<item lang="en" id="prev">Previous</item>
 		<item lang="en" id="csp_autoHover">Auto show will pause when mouse hovers over slider</item>
 		<item lang="en" id="csp_autoDelay">Time (in ms) auto show should wait before starting</item>
 		<item lang="en" id="csp_minSlides">The minimum number of slides to be shown. Slides will be sized down if carousel becomes smaller than the original size</item>

@@ -1,0 +1,1 @@
+{style src="addons/csp_banners/bxslider/jquery.bxslider.css"}

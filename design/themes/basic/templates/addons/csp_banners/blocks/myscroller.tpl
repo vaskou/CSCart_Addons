@@ -1,44 +1,6 @@
 {** block-description:myscroller **}
 
-<style type="text/css">
-	
-	#bx-pager_{$block.snapping_id}
-	{
-		text-align:center;
-	}
-	
-	#bx-pager_{$block.snapping_id} a
-	{
-		margin:0 3px;
-	}
-	
-	#bx-pager_{$block.snapping_id} a > div
-	{
-		padding:3px;
-		border:solid #ccc 1px;
-		width:80px;
-		height:80px;
-		overflow:hidden;
-		display:inline-block;
-	}
-	
-	#bx-pager_{$block.snapping_id} a.active > div
-	{
-		border:solid #5280DD 1px;
-	}
-	
-	#bx-pager_{$block.snapping_id} a > div img
-	{
-		width:auto;
-		height:100%;
-	}
-	
-	.bximg img 
-	{
-		height:auto;
-	}
-	
-</style>
+{style src='addons/csp_banners/bxslider.pager.css'}
 
 <ul id="bxslider_{$block.snapping_id}">
 	{foreach from=$items item="product" name="for_products"}
@@ -98,10 +60,10 @@
 {/foreach}
 
 {if $csp_useCSS=="false"}
-	<script src="design/themes/basic/templates/addons/cs_banners/bxslider/plugins/jquery.easing.1.3.js"></script>
+	{script src="js/addons/csp_banners/bxslider/plugins/jquery.easing.1.3.js"}
 {/if}
 {if $block.properties.csp_video=='true'}
-	<script src="design/themes/basic/templates/addons/cs_banners/bxslider/plugins/jquery.fitvids.js"></script>
+	{script src="js/addons/csp_banners/bxslider/plugins/jquery.fitvids.js"}
 {/if}
 
 <script type="text/javascript">
