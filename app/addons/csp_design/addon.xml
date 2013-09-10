@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>csp_design</id>
+    <name>CS Plus Design</name>
+    <description>Design</description>
+    <version>1.0</version>
+    <priority>2800</priority>
+    <position>100</position>
+    <status>active</status>
+	<settings layout="separate" edition_type="ROOT,ULT:VENDOR">
+		<sections>
+            <section id="csp_design_buttons">
+
+                <name>Buttons</name>       
+                <items>
+                    <item id="csp_design_show_icon">
+                        <type>checkbox</type>
+                        <name>Display icon</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				
+				
+                    <item id="csp_design_only_icon">
+                        <type>checkbox</type>
+                        <name>Display only icon</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				
+				
+                    <item id="csp_design_button_shadow">
+                        <type>checkbox</type>
+                        <name>Button with shadow</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				
+				
+                    <item id="csp_design_button_border">
+                        <type>checkbox</type>
+                        <name>Border</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				
+				
+                    <item id="csp_design_button_gradient">
+                        <type>checkbox</type>
+                        <name>Gradient color button</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				
+				
+                    <item id="csp_design_button_hover_color">
+                        <type>input</type>
+                        <name>Button hover color</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				
+				
+                    <item id="csp_design_button_font_color">
+                        <type>input</type>
+                        <name>Button font color</name>
+                        <tooltip>Check to show cart icon</tooltip>
+                    </item>
+				</items>
+			</section>
+		</sections>
+	</settings>
+</addon>
