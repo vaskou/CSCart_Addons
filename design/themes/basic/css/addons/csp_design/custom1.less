@@ -72,14 +72,14 @@ h1 .mainbox-title, .mainbox-title span, .product-main-info h1.mainbox-title, .pr
 //Buttons
 .button-submit-action input, .button-submit input, .button a, .button-action a, .button-big a, .button-submit-action input, .button-submit input, .button-submit-big input {
     font-family: @csp_buttons_font;
-    font-size: ~"@csp_{buttons_font_size}px";
+    font-size: ~"@{csp_buttons_font_size}px";
     font-weight: @csp_buttons_font_weight;
     font-style: @csp_buttons_font_style;
     text-decoration: @csp_buttons_font_decoration;
 }
 .button-big-size(@csp_btn_big_size_value) {
 	@csp_btn_big_size_px_value: (@csp_btn_big_size_value * 1.15);
-	font-size: ~"@csp_{btn_big_size_px_value}px"; 
+	font-size: ~"@{csp_btn_big_size_px_value}px"; 
 }
 .button-submit-big input, .button-big a {
    .button-big-size(@csp_buttons_font_size);

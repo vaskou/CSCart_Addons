@@ -17,7 +17,7 @@
 {/if}
 
 {if $but_name && $but_role != "text" && $but_role != "act" && $but_role != "delete"} {* SUBMIT BUTTON *}
-    <span {$but_extra} {if $but_id}id="wrap_{$but_id}"{/if} {if $but_css}style="{$but_css}"{/if} class="button-submit{$suffix} button-wrap-left" style="opacity:0.999;">
+    <span {$but_extra} {if $but_id}id="wrap_{$but_id}"{/if} {if $but_css}style="{$but_css}"{/if} class="button-submit{$suffix} button-wrap-left">
     {if $addons.csp_design.csp_design_show_icon=="Y" && $but_type=="cart"}
 	    <i class="icon-shopping-cart icon-2x" style="/*vertical-align:middle;position: relative;left: 5px;display: inline-block;margin: 0;*/width: 1px;float:left;z-index: -1;"></i>
     {/if}
