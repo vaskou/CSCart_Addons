@@ -113,7 +113,7 @@
             {$smarty.capture.$product_edp nofilter}
         </div>
 
-        <div class="span4">
+        <div class="span6">
             {assign var="add_to_cart" value="add_to_cart_`$obj_id`"}
             {$smarty.capture.$add_to_cart nofilter}
         </div>
