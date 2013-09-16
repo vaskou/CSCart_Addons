@@ -48,7 +48,7 @@
 /******************************* CSP Grid list Style ****************************************/
 /* Used in file \addons\csp_responsive\overrides\views\products\components\product_icon.tpl */
 
-.product-cell-wrapper table{
+/*.product-cell-wrapper table{
 	display:block;
 }
 
@@ -78,7 +78,7 @@ td.preview-image img{
 td.preview-image a{
 	display:block;
 }
-
+*/
 /******************************* END CSP Grid list Style ************************************/
 
 {/literal}
@@ -88,6 +88,8 @@ td.preview-image a{
 
 {style src="addons/csp_responsive/topmenu.less"}
 
+
 {******************************* END CSP Top Menu Style *************************************}
 
 {style src="addons/csp_responsive/meanmenu.css"}
+{style src="addons/csp_responsive/meanmenu.less"}

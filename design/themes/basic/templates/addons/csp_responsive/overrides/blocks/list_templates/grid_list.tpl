@@ -109,13 +109,13 @@
     {if $iteration % $columns != 0} 
         {math assign="empty_count" equation="c - it%c" it=$iteration c=$columns}
         {section loop=$empty_count name="empty_rows"}
-            <td class="product-spacer">&nbsp;</td>
-            <td class="product-cell product-cell-empty valign-top" style="width: {$cell_width}%">
+<!--            <td class="product-spacer">&nbsp;</td>-->
+            <td class="product-cell product-cell-empty valign-top span{$span_no}">
                 <div>
                     <p>{__("empty")}</p>
                 </div>
             </td>
-            <td class="product-spacer">&nbsp;</td>
+<!--            <td class="product-spacer">&nbsp;</td>-->
         {/section}
     {/if}
 {/if}
@@ -138,3 +138,6 @@
 {*Line  38: commented the line 																			*}
 {*Line  39: removed style="width: {$cell_width}%" and added class span{$span_no} 						*}
 {*Line  101: commented the line 																		*}
+{*Line  112: commented the line 																		*}
+{*Line  113: removed style="width: {$cell_width}%" and added class span{$span_no} 						*}
+{*Line  118: commented the line 																		*}

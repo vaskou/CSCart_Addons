@@ -5,3 +5,11 @@
 {style src="addons/csp_design/sidebox.less"}
 {style src="addons/csp_design/tabs.less"}
 {style src="addons/csp_design/tables.less"}
+{style src="addons/csp_design/wishlist.less"}
+{style src="addons/csp_design/section.less"}
+{style src="addons/csp_design/checkout_cart.less"}
+{style src="addons/csp_design/dropdown_box.less"}
+{style src="addons/csp_design/popup.less"}
+{style src="addons/csp_design/ui.less"}
+{style src="addons/csp_design/dropdown_content.less"}
+{style src="addons/csp_design/input.less"}
