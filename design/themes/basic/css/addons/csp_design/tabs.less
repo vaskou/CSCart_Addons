@@ -78,10 +78,10 @@
 	border-color: lighten(@base, 36%);
 }
 .tabs ul li {
-	.gradient (lighten(@base, 0%), lighten(@base, 0%));							/*.gradient (lighten(@base, 50%), lighten(@base, 44%));*/
+	.gradient (lighten(@base, 100%), lighten(@base, 100%));							/*.gradient (lighten(@base, 50%), lighten(@base, 44%));*/
 }
 .tabs ul li:hover {
-	.gradient (lighten(@base, 0%), lighten(@base, 0%));							/*.gradient (lighten(@base, 47%), lighten(@base, 41%));*/
+	.gradient (lighten(@base, 40%), lighten(@base, 40%));							/*.gradient (lighten(@base, 47%), lighten(@base, 41%));*/
 }
 .tabs ul li.active, .tabs ul li.cm-active {
 	.gradient (lighten(@base, 100%), lighten(@base, 100%));						/*.gradient (lighten(@base, 100%), lighten(@base, 100%));*/
@@ -112,3 +112,9 @@
 }
 
 /****************************** MY CUSTOMS ***********************************/
+
+.tab-icon {
+	float:left;
+	margin:0px 0px 0px 9px;
+	line-height:38px;
+}
