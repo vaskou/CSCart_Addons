@@ -22,5 +22,23 @@ $(function(){
 			var to;
             to = setTimeout(function(){ },700);
 		});
+		
+		var interv;
+		
+		$('[class*="fadein_"]').hover(
+		function(){
+			$this=$(this);
+			interv=setInterval(function() {
+				$this.children(':first').hide(1,function(){
+					$(this).appendTo($this).fadeIn(1000);
+				});
+			}, 2000);
+		},
+		function(){
+			clearInterval(interv);
+		});
+		
+	
+		
 	}
 });

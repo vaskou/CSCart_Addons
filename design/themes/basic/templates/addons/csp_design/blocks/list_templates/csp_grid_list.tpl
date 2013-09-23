@@ -27,16 +27,16 @@
 {if $settings.Appearance.enable_quick_view == 'Y'}
 {$quick_nav_ids = $products|fn_fields_from_multi_level:"product_id":"product_id"}
 {/if}
-<div class="csp_sistina woocommerce">
-<ul class="products row-fluid">
+<div class="csp_sistina">
+<ul class="products row-fluid">{$k=0}
 {foreach from=$products item="product" name="sproducts"}
 {if $i!=$columns}
 	{$i=$i+1}
 {else}
 	{$i=1}
 {/if}
-
-    <li class="product span{$span_no} type-product status-publish hentry {if $i==1}first{/if} {if $i==$columns}last{/if} grid with-hover add-hover open-on-mobile with-border sale featured instock">
+{$k=$k+1}
+    <li class="product span{$span_no} {if $i==1}first{/if} {if $i==$columns}last{/if}">
     {if $product}
         {assign var="obj_id" value=$product.product_id}
         {assign var="obj_id_prefix" value="`$obj_prefix``$product.product_id`"}
@@ -49,22 +49,26 @@
         	{hook name="products:product_multicolumns_list"}
             {capture name="main_icon"}
             	<a href="{"products.view?product_id=`$product.product_id`"|fn_url}" class="thumb">
-	            	{include file="common/image.tpl" obj_id=$obj_id_prefix images=$product.main_pair image_width=$settings.Thumbnails.product_lists_thumbnail_width image_height=$settings.Thumbnails.product_lists_thumbnail_height class="first"}
+	            	{include file="common/image.tpl" obj_id=$obj_id_prefix images=$product.main_pair image_width=$settings.Thumbnails.product_lists_thumbnail_width image_height=$settings.Thumbnails.product_lists_thumbnail_height }
                 </a>
             {/capture}
             {if $product.image_pairs}
-            	<a href="{"products.view?product_id=`$product.product_id`"|fn_url}" class="thumb">
+            	<div class="prod_img fadein_{$k}">
+                    {foreach from=$product.image_pairs item="image_pair"}
+                        {if $image_pair}
+                            <a href="{"products.view?product_id=`$product.product_id`"|fn_url}" class="thumb">
+                            {include file="common/image.tpl" obj_id="`$obj_id_prefix`_`$image_pair.image_id`" images=$image_pair image_width=$settings.Thumbnails.product_lists_thumbnail_width image_height=$settings.Thumbnails.product_lists_thumbnail_height}</a>
+                        {/if}
+                    {/foreach}
                     {if $product.main_pair}
                         {$smarty.capture.main_icon nofilter}
                     {/if}
-                    {foreach from=$product.image_pairs item="image_pair"}
-                        {if $image_pair}
-                            {include file="common/image.tpl" obj_id="`$obj_id_prefix`_`$image_pair.image_id`" images=$image_pair image_width=$settings.Thumbnails.product_lists_thumbnail_width image_height=$settings.Thumbnails.product_lists_thumbnail_height class="extra"}
-                        {/if}
-                    {/foreach}
-                </a>
+                </div>
+                
             {else}
+            	<div class="prod_img">
             	{$smarty.capture.main_icon nofilter}
+                </div>
             {/if}
             
             {if $item_number == "Y"}<span class="item-number">{$cur_number}.&nbsp;</span>{math equation="num + 1" num=$cur_number assign="cur_number"}{/if}
