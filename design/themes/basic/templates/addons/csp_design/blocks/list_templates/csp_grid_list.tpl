@@ -52,8 +52,17 @@
 	            	{include file="common/image.tpl" obj_id=$obj_id_prefix images=$product.main_pair image_width=$settings.Thumbnails.product_lists_thumbnail_width image_height=$settings.Thumbnails.product_lists_thumbnail_height }
                 </a>
             {/capture}
+            
+            {if $product.list_discount_prc}
+            <span class="thumb-discount-label">
+            	{strip}    
+                    {__("save_discount")} {$product.list_discount_prc}%
+            	{/strip}
+            </span>
+            {/if}
+            
             {if $product.image_pairs}
-            	<div class="prod_img fadein_{$k}">
+            	<div class="prod_img fadein_{$k}" style="height:{$settings.Thumbnails.product_lists_thumbnail_height}px;">
                     {foreach from=$product.image_pairs item="image_pair"}
                         {if $image_pair}
                             <a href="{"products.view?product_id=`$product.product_id`"|fn_url}" class="thumb">
@@ -63,6 +72,7 @@
                     {if $product.main_pair}
                         {$smarty.capture.main_icon nofilter}
                     {/if}
+                    <div class="progress-bar"></div>
                 </div>
                 
             {else}
@@ -75,7 +85,7 @@
             
             {assign var="name" value="name_$obj_id"}
             <h3>{$smarty.capture.$name nofilter}</h3>
-            <span class="price">
+            <span class="price-wrapper">
                 
                 {assign var="old_price" value="old_price_`$obj_id`"}
                 {if $smarty.capture.$old_price|trim}{$smarty.capture.$old_price nofilter}&nbsp;{/if}
@@ -93,9 +103,13 @@
             
             <div class="product-meta">
                     <div class="product-meta-wrapper">
+                    	<div class="features">{assign var="product_features" value="product_features_`$obj_id`"}{$smarty.capture.$product_features nofilter}</div>
                         <div class="classic-rating"></div>
                         
                         <div class="buttons-list-wrapper"> 
+                        	{if $settings.Appearance.enable_quick_view == 'Y'}
+                    			{include file="views/products/components/quick_view_link.tpl" quick_nav_ids=$quick_nav_ids}
+			                {/if}
                         	{if $show_add_to_cart}
                                 {assign var="add_to_cart" value="add_to_cart_`$obj_id`"}
                                 {$smarty.capture.$add_to_cart nofilter}

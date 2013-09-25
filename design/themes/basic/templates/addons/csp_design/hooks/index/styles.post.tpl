@@ -27,14 +27,17 @@
         
 	<style>
 		{literal}
+		@media (min-width:768px){
 			.tabs{
 				width:{/literal}{$left_width}{literal}%;
 			}
 			.cm-tabs-content {
 				width:{/literal}{$right_width}{literal}%;
 			}
+		}
 		{/literal}
     </style>
 {/if}
 
 {style src="addons/csp_design/csp_sistina.css"}
+{style src="addons/csp_design/csp_sistina.less"}
