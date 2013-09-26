@@ -36,7 +36,7 @@
 	{$i=1}
 {/if}
 {$k=$k+1}
-    <li class="product span{$span_no} {if $i==1}first{/if} {if $i==$columns}last{/if}">
+    <li class="product fadein span{$span_no} {if $i==1}first{/if} {if $i==$columns}last{/if}">
     {if $product}
         {assign var="obj_id" value=$product.product_id}
         {assign var="obj_id_prefix" value="`$obj_prefix``$product.product_id`"}
@@ -62,7 +62,7 @@
             {/if}
             
             {if $product.image_pairs}
-            	<div class="prod_img fadein_{$k}" style="height:{$settings.Thumbnails.product_lists_thumbnail_height}px;">
+            	<div class="prod_img multi_img" style="height:{$settings.Thumbnails.product_lists_thumbnail_height}px;">
                     {foreach from=$product.image_pairs item="image_pair"}
                         {if $image_pair}
                             <a href="{"products.view?product_id=`$product.product_id`"|fn_url}" class="thumb">

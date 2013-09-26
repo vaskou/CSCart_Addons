@@ -44,9 +44,9 @@ $(function(){
 		$('.product').hover(
 		function(){
 			if(toggle_flag){
-				$(this).find('.product-meta-wrapper').slideDown(100);
+				$(this).find('.product-meta-wrapper').slideDown(200);
 			}
-			$('.product').not($(this)).stop(true, false).animate({opacity:0.6}, 300);
+			$('.product').not($(this)).stop(true, false).animate({opacity:0.6}, 70);
 			var to;
             clearTimeout(to);
 		},
@@ -54,7 +54,7 @@ $(function(){
 			if(toggle_flag){
 				$(this).find('.product-meta-wrapper').slideUp(10);
 			}
-			$('.product').delay(10).animate({opacity:1}, 300);
+			$('.product').delay(10).animate({opacity:1}, 100);
 			var to;
             to = setTimeout(function(){ },700);
 		});
@@ -66,16 +66,23 @@ $(function(){
 			return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 		}
 
+		
 		var interv;
 		
-		$('[class*="fadein_"]').hover(
+		$('.fadein').hover(
 		function(){
-			$this=$(this);
+			var elm;
+			$this=$(this).find('.multi_img');
+			if($this.hasClass('list_tmp')){
+				elm='img';
+			}else{
+				elm='a';
+			}
 			if(!isIE() || isIE()>9){
-				$this.children('a:first').appendTo($this);
+				$this.children(elm+':first').appendTo($this);
 			}
 			interv=setInterval(function() {
-				$this.children('a:first').hide(1,function(){
+				$this.children(elm+':first').hide(1,function(){
 					$(this).appendTo($this).fadeIn();
 				});
 			}, 2000);

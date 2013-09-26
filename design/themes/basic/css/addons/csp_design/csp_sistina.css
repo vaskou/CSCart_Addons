@@ -135,7 +135,7 @@
 	padding-bottom: 0;
 }
 
-.prod_img:hover .progress-bar{
+.fadein:hover .progress-bar{
 	-webkit-animation: fullexpand 2s ease-out infinite;
    	-moz-animation: fullexpand 2s ease-out infinite;
    	animation: fullexpand 2s ease-out infinite;
@@ -184,11 +184,13 @@
 	//height: 160px;
 	text-align:center;
 }
-.prod_img a img{
+.multi_img a img, 
+.list_tmp img{
 	max-width:100%;
 	height:auto;	
 }
-[class*="fadein_"] a {
+.multi_img a,
+.list_tmp img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -198,7 +200,7 @@
 
 .progress-bar { 
 	position: absolute;
-	margin-left:9%;
+	margin-left:10%;
 	bottom:0px;
 	width: 0%; 
 	height: 5px;
