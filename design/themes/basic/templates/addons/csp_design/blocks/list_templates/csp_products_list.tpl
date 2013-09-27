@@ -16,7 +16,7 @@
 {assign var="obj_id" value=$product.product_id}
 {assign var="obj_id_prefix" value="`$obj_prefix``$product.product_id`"}
 {include file="common/product_data.tpl" product=$product min_qty=true}
-
+<div class="csp_sistina">
 <div class="product-container template-products list clearfix{if $settings.Appearance.default_product_details_layout != "default_template"} long{/if} row-fluid fadein">
     {assign var="form_open" value="form_open_`$obj_id`"}
     {$smarty.capture.$form_open nofilter}
@@ -49,7 +49,7 @@
             {/capture}
             
             {if $product.image_pairs}
-            	<div class="list_tmp multi_img prod_img" style="height:{$settings.Thumbnails.product_lists_thumbnail_height}px;">
+            	<div class="multi_img prod_img" style="height:{$settings.Thumbnails.product_lists_thumbnail_height}px;">
                     {foreach from=$product.image_pairs item="image_pair"}
                         {if $image_pair}
                  	       {include file="common/image.tpl" obj_id="`$obj_id_prefix`_`$image_pair.image_id`" images=$image_pair image_width=$settings.Thumbnails.product_lists_thumbnail_width image_height=$settings.Thumbnails.product_lists_thumbnail_height}
@@ -143,6 +143,7 @@
     </div>
     {assign var="form_close" value="form_close_`$obj_id`"}
     {$smarty.capture.$form_close nofilter}
+</div>
 </div>
 {if !$smarty.foreach.products.last}
 <hr />

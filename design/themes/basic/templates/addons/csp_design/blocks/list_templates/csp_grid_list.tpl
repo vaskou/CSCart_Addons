@@ -21,6 +21,7 @@
 {/if}
 
 {math equation="16 / x" x=$columns|default:"2" format="%.0f" assign="span_no"}
+{math equation="16 % x" x=$columns|default:"2" format="%.0f" assign="modulus"}
 {$i=$columns}
 {script src="js/tygh/product_image_gallery.js"}
 
@@ -36,7 +37,7 @@
 	{$i=1}
 {/if}
 {$k=$k+1}
-    <li class="product fadein span{$span_no} {if $i==1}first{/if} {if $i==$columns}last{/if}">
+    <li class="product fadein span{$span_no} {if $i==1}{if $modulus!=0}first_offset{else}first{/if}{/if} {if $i==$columns}last{/if}">
     {if $product}
         {assign var="obj_id" value=$product.product_id}
         {assign var="obj_id_prefix" value="`$obj_prefix``$product.product_id`"}
@@ -102,29 +103,29 @@
             </span>
             
             <div class="product-meta">
-                    <div class="product-meta-wrapper">
-                    	<div class="features">{assign var="product_features" value="product_features_`$obj_id`"}{$smarty.capture.$product_features nofilter}</div>
-                        <div class="classic-rating"></div>
-                        
-                        <div class="buttons-list-wrapper"> 
-                        	{if $settings.Appearance.enable_quick_view == 'Y'}
-                    			{include file="views/products/components/quick_view_link.tpl" quick_nav_ids=$quick_nav_ids}
-			                {/if}
-                        	{if $show_add_to_cart}
-                                {assign var="add_to_cart" value="add_to_cart_`$obj_id`"}
-                                {$smarty.capture.$add_to_cart nofilter}
-                            {/if}
-                            <div class="product-actions buttons_2 group">
-                                <div class="action first wishlist">
-                                    
-                                </div>
-                                <div class="action compare">
-                                    
-                                </div>
+                <div class="product-meta-wrapper">
+                    <div class="features">{assign var="product_features" value="product_features_`$obj_id`"}{$smarty.capture.$product_features nofilter}</div>
+                    <div class="classic-rating"></div>
+                    
+                    <div class="buttons-list-wrapper"> 
+                        {if $settings.Appearance.enable_quick_view == 'Y'}
+                            {include file="views/products/components/quick_view_link.tpl" quick_nav_ids=$quick_nav_ids}
+                        {/if}
+                        {if $show_add_to_cart}
+                            {assign var="add_to_cart" value="add_to_cart_`$obj_id`"}
+                            {$smarty.capture.$add_to_cart nofilter}
+                        {/if}
+                        <div class="product-actions buttons_2 group">
+                            <div class="action first wishlist">
+                                
+                            </div>
+                            <div class="action compare">
+                                
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
                               
         {/hook}
         {assign var="form_close" value="form_close_`$obj_id`"}

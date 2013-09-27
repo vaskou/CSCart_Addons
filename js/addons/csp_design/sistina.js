@@ -41,7 +41,7 @@ $(function(){
 
 /*********************************** Hover animation *****************************************/
 			
-		$('.product').hover(
+		$('.csp_sistina .product').hover(
 		function(){
 			if(toggle_flag){
 				$(this).find('.product-meta-wrapper').slideDown(200);
@@ -61,35 +61,14 @@ $(function(){
 
 /******************************* END Hover animation *****************************************/
 
-		function isIE () {
- 			var myNav = navigator.userAgent.toLowerCase();
-			return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
-		}
-
 		
-		var interv;
+		$('.products .multi_img').slides();
 		
-		$('.fadein').hover(
-		function(){
-			var elm;
-			$this=$(this).find('.multi_img');
-			if($this.hasClass('list_tmp')){
-				elm='img';
-			}else{
-				elm='a';
-			}
-			if(!isIE() || isIE()>9){
-				$this.children(elm+':first').appendTo($this);
-			}
-			interv=setInterval(function() {
-				$this.children(elm+':first').hide(1,function(){
-					$(this).appendTo($this).fadeIn();
-				});
-			}, 2000);
-		},
-		function(){
-			clearInterval(interv);
+		$('.product-container').slides({
+			element:'img',
+			container:'.multi_img'
 		});
+		
 		
 	}
 });

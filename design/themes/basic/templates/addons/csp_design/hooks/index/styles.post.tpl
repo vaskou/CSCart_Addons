@@ -41,3 +41,5 @@
 
 {style src="addons/csp_design/csp_sistina.css"}
 {style src="addons/csp_design/csp_sistina.less"}
+{style src="addons/csp_design/mcs_hover_grid.css"}
+{style src="addons/csp_design/slides.css"}
